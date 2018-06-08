@@ -1,0 +1,7 @@
+cc_library {
+    name: "libselinux_stubs",
+
+    srcs: ["stubs.c"],
+    include_dirs: ["external/selinux/libselinux/include"],
+}
+
