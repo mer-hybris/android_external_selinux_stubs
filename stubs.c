@@ -11,44 +11,44 @@ int is_selinux_enabled(void) { return 0; }
 int is_selinux_mls_enabled(void) { return 0; }
 void freecon(char * con) { }
 void freeconary(char ** con) { }
-int getcon(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getcon_raw(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
+int getcon(char ** con) { if(con) *con = "dummy"; return 0; }
+int getcon_raw(char ** con) { if(con) *con = "dummy"; return 0; }
 int setcon(const char * con) { return 0; }
 int setcon_raw(const char * con) { return 0; }
-int getpidcon(pid_t pid, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getpidcon_raw(pid_t pid, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getprevcon(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getprevcon_raw(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getexeccon(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getexeccon_raw(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
+int getpidcon(pid_t pid, char ** con) { if(con) *con = "dummy"; return 0; }
+int getpidcon_raw(pid_t pid, char ** con) { if(con) *con = "dummy"; return 0; }
+int getprevcon(char ** con) { if(con) *con = "dummy"; return 0; }
+int getprevcon_raw(char ** con) { if(con) *con = "dummy"; return 0; }
+int getexeccon(char ** con) { if(con) *con = "dummy"; return 0; }
+int getexeccon_raw(char ** con) { if(con) *con = "dummy"; return 0; }
 int setexeccon(const char * con) { return 0; }
 int setexeccon_raw(const char * con) { return 0; }
-int getfscreatecon(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getfscreatecon_raw(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
+int getfscreatecon(char ** con) { if(con) *con = "dummy"; return 0; }
+int getfscreatecon_raw(char ** con) { if(con) *con = "dummy"; return 0; }
 int setfscreatecon(const char * context) { return 0; }
 int setfscreatecon_raw(const char * context) { return 0; }
-int getkeycreatecon(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getkeycreatecon_raw(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
+int getkeycreatecon(char ** con) { if(con) *con = "dummy"; return 0; }
+int getkeycreatecon_raw(char ** con) { if(con) *con = "dummy"; return 0; }
 int setkeycreatecon(const char * context) { return 0; }
 int setkeycreatecon_raw(const char * context) { return 0; }
-int getsockcreatecon(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getsockcreatecon_raw(char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
+int getsockcreatecon(char ** con) { if(con) *con = "dummy"; return 0; }
+int getsockcreatecon_raw(char ** con) { if(con) *con = "dummy"; return 0; }
 int setsockcreatecon(const char * context) { return 0; }
 int setsockcreatecon_raw(const char * context) { return 0; }
-int getfilecon(const char *path, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getfilecon_raw(const char *path, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int lgetfilecon(const char *path, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int lgetfilecon_raw(const char *path, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int fgetfilecon(int fd, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int fgetfilecon_raw(int fd, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
+int getfilecon(const char *path, char ** con) { if(con) *con = "dummy"; return 0; }
+int getfilecon_raw(const char *path, char ** con) { if(con) *con = "dummy"; return 0; }
+int lgetfilecon(const char *path, char ** con) { if(con) *con = "dummy"; return 0; }
+int lgetfilecon_raw(const char *path, char ** con) { if(con) *con = "dummy"; return 0; }
+int fgetfilecon(int fd, char ** con) { if(con) *con = "dummy"; return 0; }
+int fgetfilecon_raw(int fd, char ** con) { if(con) *con = "dummy"; return 0; }
 int setfilecon(const char *path, const char * con) { return 0; }
 int setfilecon_raw(const char *path, const char * con) { return 0; }
 int lsetfilecon(const char *path, const char * con) { return 0; }
 int lsetfilecon_raw(const char *path, const char * con) { return 0; }
 int fsetfilecon(int fd, const char * con) { return 0; }
 int fsetfilecon_raw(int fd, const char * con) { return 0; }
-int getpeercon(int fd, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
-int getpeercon_raw(int fd, char ** con) { if(con) *con = (char*)0xDEADBEEF; return 0; }
+int getpeercon(int fd, char ** con) { if(con) *con = "dummy"; return 0; }
+int getpeercon_raw(int fd, char ** con) { if(con) *con = "dummy"; return 0; }
 void selinux_set_callback(int type, union selinux_callback cb) { }
 int security_compute_av(const char * scon,
 					const char * tcon,

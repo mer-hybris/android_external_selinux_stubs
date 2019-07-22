@@ -1,6 +1,8 @@
 cc_library {
     name: "libselinux_stubs",
-
+    cflags: [
+        "-Wno-error=unused-parameter",
+    ],
     srcs: ["stubs.c"],
     include_dirs: ["external/selinux/libselinux/include"],
 }
