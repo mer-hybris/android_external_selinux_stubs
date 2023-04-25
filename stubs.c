@@ -302,27 +302,27 @@ int context_range_set(context_t c, const char *s) { return 0; }
 int context_role_set(context_t c, const char *s) { return 0; }
 int context_user_set(context_t c, const char *s) { return 0; }
 int get_ordered_context_list(const char *user,
-					char * fromcon,
+					const char * fromcon,
 					char *** list) { return 0; }
 int get_ordered_context_list_with_level(const char *user,
 					const char *level,
-					char * fromcon,
+					const char * fromcon,
 					char *** list) { return 0; }
 int get_default_context(const char *user,
-					char * fromcon,
+					const char * fromcon,
 					char ** newcon) { return 0; }
 int get_default_context_with_level(const char *user,
 					const char *level,
-					char * fromcon,
+					const char * fromcon,
 					char ** newcon) { return 0; }
 int get_default_context_with_role(const char *user,
 					const char *role,
-					char * fromcon,
+					const char * fromcon,
 					char ** newcon) { return 0; }
 int get_default_context_with_rolelevel(const char *user,
 					const char *role,
 					const char *level,
-					char * fromcon,
+					const char * fromcon,
 					char ** newcon) { return 0; }
 int query_user_context(char ** list,
 				  char ** newcon) { return 0; }
