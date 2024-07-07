@@ -110,7 +110,7 @@ int security_compute_user(const char * scon,
 int security_compute_user_raw(const char * scon,
 				const char *username,
 				char *** con) { return 0; }
-int security_load_policy(void *data, size_t len) { return 0; }
+int security_load_policy(const void *data, size_t len) { return 0; }
 int security_get_initial_context(const char *name,
 					char ** con) { return 0; }
 int security_get_initial_context_raw(const char *name,
@@ -291,7 +291,7 @@ int selinux_status_getenforce(void) { return 0; }
 int selinux_status_policyload(void) { return 0; }
 int selinux_status_deny_unknown(void) { return 0; }
 context_t context_new(const char *s) { return 0; }
-char *context_str(context_t c) { return 0; }
+const char *context_str(context_t c) { return 0; }
 void context_free(context_t c) { }
 const char *context_type_get(context_t c) { return 0; }
 const char *context_range_get(context_t c) { return 0; }
