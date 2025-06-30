@@ -136,7 +136,7 @@ int security_get_boolean_pending(const char *name) { return 0; }
 int security_get_boolean_active(const char *name) { return 0; }
 int security_set_boolean(const char *name, int value) { return 0; }
 int security_commit_booleans(void) { return 0; }
-int selinux_set_mapping(struct security_class_mapping *map) { return 0; }
+int selinux_set_mapping(const struct security_class_mapping *map) { return 0; }
 security_class_t mode_to_security_class(mode_t mode) { return 0; }
 security_class_t string_to_security_class(const char *name) { return 0; }
 const char *security_class_to_string(security_class_t cls) { return 0; }
@@ -246,7 +246,7 @@ int avc_init(const char *msgprefix,
 		const struct avc_log_callback *log_callbacks,
 		const struct avc_thread_callback *thread_callbacks,
 		const struct avc_lock_callback *lock_callbacks) { return 0; }
-int avc_open(struct selinux_opt *opts, unsigned nopts) { return 0; }
+int avc_open(const struct selinux_opt *opts, unsigned nopts) { return 0; }
 void avc_cleanup(void) { }
 int avc_reset(void) { return 0; }
 void avc_destroy(void) { }
@@ -347,8 +347,8 @@ int selabel_digest(struct selabel_handle *rec,
 				unsigned char **digest, size_t *digest_len,
 				char ***specfiles, size_t *num_specfiles) { return 0; }
 void selabel_stats(struct selabel_handle *handle) { }
-enum selabel_cmp_result selabel_cmp(struct selabel_handle *h1,
-                                    struct selabel_handle *h2) { return SELABEL_INCOMPARABLE; }
+enum selabel_cmp_result selabel_cmp(const struct selabel_handle *h1,
+                                    const struct selabel_handle *h2) { return SELABEL_INCOMPARABLE; }
 int selinux_restorecon(const char *pathname,
 					unsigned int restorecon_flags) { return 0; }
 struct selabel_handle *selinux_restorecon_default_handle(void) { return 0; }
